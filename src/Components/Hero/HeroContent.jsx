@@ -1,21 +1,27 @@
-import HeroAction from "./HeroActions";
+import HeroActions from "./HeroActions.jsx";
 
-function HeroContent({ 
-    label, 
-    title, 
-    description,
+function HeroContent({
+  label,
+  title,
+  description
 }) {
-    return (
-        <div>
-            <p>{label}</p>
+  return (
+    <div className="max-w-xl">
+      <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+        {label}
+      </p>
 
-            <h1>{title}</h1>
+      <h1 className="max-w-lg text-5xl font-medium leading-[1.05] tracking-tight text-gray-950" style={{ color: "rgb(89, 89, 91)" }}>
+        {title}
+      </h1>
 
-            <p>{description}</p>
+      <p className="mt-5 max-w-lg text-base leading-7 text-gray-500">
+        {description}
+      </p>
 
-            <HeroAction />
-        </div>
-    );
+      <HeroActions />
+    </div>
+  );
 }
 
 export default HeroContent;

@@ -2,12 +2,14 @@ import Header from "../Header/Header";
 
 function Layout({ children }) {
   return (
-    <>
-      <Header/>
+    <div className="min-h-screen bg-white text-gray-900">
+      <Header />
+
       <main>
         {children}
       </main>
-    </>
+    </div>
   );
 }
+
 export default Layout;

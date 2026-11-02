@@ -1,14 +1,17 @@
+import Search from "./Search";
 import AccountAction from "./AccountAction";
 import CartAction from "./CartAction";
-import Search from "./Search";
 
 function HeaderActions() {
-    return (
-        <div>
-            <Search/>
-            <AccountAction />
-            <CartAction count={0} />
-        </div>
-    );
+  return (
+    <div className="flex items-center gap-4">
+      <Search />
+
+      <AccountAction />
+
+      <CartAction count={0} />
+    </div>
+  );
 }
+
 export default HeaderActions;
