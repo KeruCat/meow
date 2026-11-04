@@ -1,5 +1,6 @@
 import Hero from "../Components/Hero/Hero";
 import Categories from "../Components/SectionPages/Categories/Categories";
+import Products from "../Components/SectionPages/Products/Products";
 
 
 function HomePage() {
@@ -7,7 +8,7 @@ function HomePage() {
     <>
       <Hero />
       <Categories />
-      
+      <Products />
     </>
   );
 }
