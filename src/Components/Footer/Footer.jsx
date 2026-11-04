@@ -30,12 +30,12 @@ const columns = [
 
 function Footer() {
   return (
-    <footer>
-      <div>
+    <footer className="mt-20 border-t border-gray-200 bg-white">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Brand name="Витрина" />
 
-          <p>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-gray-500">
             Учебный интернет-магазин: витрина, корзина и админ-панель с CRUD на React.
           </p>
         </div>
@@ -49,8 +49,8 @@ function Footer() {
         ))}
       </div>
 
-      <div>
-        <div>
+      <div className="border-t border-gray-200">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-5 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Витрина. Учебный проект.</p>
           <p>Дизайн-система: React · Tailwind CSS · React Router</p>
         </div>
