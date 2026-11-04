@@ -17,7 +17,7 @@ function SectionHeader({ eyebrow, title, linkText, href }) {
         className="hidden items-center gap-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900 sm:flex"
       >
         {linkText}
-        <ArrowRight/>  
+        <ArrowRight className="h-3.5 w-3.5"/>  
       </a>
     </div>
   );

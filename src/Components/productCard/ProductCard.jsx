@@ -53,7 +53,7 @@ function ProductCard({ id, name, category, image, price, inStock }) {
             type="button"
             className="inline-flex h-8 items-center justify-center gap-1.5 whitespace-nowrap rounded-md bg-emerald-900 px-3 text-xs font-medium text-white shadow transition-colors hover:bg-emerald-800"
           >
-            <ShoppingBag/>
+            <ShoppingBag className="h-5 w-5"/>
             В корзину
           </button>
         </div>
