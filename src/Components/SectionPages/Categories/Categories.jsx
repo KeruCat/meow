@@ -18,7 +18,7 @@ const categories = [
 
 function Categories() {
   return (
-    <section>
+    <section className="mx-auto max-w-6xl px-6 pt-10">
       <SectionHeader
         eyebrow="Категории"
         title="Популярные категории"
@@ -26,12 +26,13 @@ function Categories() {
         href="/products"
       />
 
-      <div>
+      <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
         {categories.map((category) => (
           <CategoryCard
             key={category.name}
             name={category.name}
             image={category.image}
+            href={`/products?category=${encodeURIComponent(category.name)}`}
           />
         ))}
       </div>
