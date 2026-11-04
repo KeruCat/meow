@@ -1,4 +1,4 @@
-import CategoriesHeader from "./CategoriesHeader";
+import SectionHeader from "../SectionHeader";
 import CategoryCard from "./CategoryCard";
 
 const categories = [
@@ -19,7 +19,12 @@ const categories = [
 function Categories() {
   return (
     <section>
-      <CategoriesHeader />
+      <SectionHeader
+        eyebrow="Категории"
+        title="Популярные категории"
+        linkText="Весь каталог"
+        href="/products"
+      />
 
       <div>
         {categories.map((category) => (
