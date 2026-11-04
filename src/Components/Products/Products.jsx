@@ -1,5 +1,5 @@
 import SectionHeader from "../SectionHeader";
-import ProductCard from "../../productCard//ProductCard";
+import ProductCard from "../productCard/ProductCard";
 
 const products = [
   {
