@@ -21,7 +21,7 @@ const features = [
 
 function Features() {
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-20 pt-16">
+    <section className="mx-auto max-w-6xl px-6">
       <div className="grid gap-6 rounded-xl border border-gray-200 bg-white p-6 sm:grid-cols-3 sm:p-8">
         {features.map((feature) => (
           <FeatureItem

@@ -1,3 +1,4 @@
+import NavItem from "../Header/NavItem";
 function FooterColumn({ title, links }) {
   return (
     <div>
@@ -8,12 +9,10 @@ function FooterColumn({ title, links }) {
       <ul className="mt-4 space-y-2.5">
         {links.map((link) => (
           <li key={link.label}>
-            <a
-              href={link.href}
-              className="text-sm text-gray-500 transition-colors hover:text-gray-900"
-            >
-              {link.label}
-            </a>
+            <NavItem
+                href={link.href}
+                label={link.label}
+            />
           </li>
         ))}
       </ul>
