@@ -10,7 +10,7 @@ function FooterColumn({ title, links }) {
         {links.map((link) => (
           <li key={link.label}>
             <NavItem
-                href={link.href}
+                path={link.href}
                 label={link.label}
             />
           </li>
