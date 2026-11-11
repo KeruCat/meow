@@ -3,9 +3,9 @@ import ProductCard from "../productCard/ProductCard";
 function ProductGrid({ products }) {
   return (
     <div>
-      <p>Найдено товаров: {products.length}</p>
+      <p className="text-sm text-gray-500">Найдено товаров: {products.length}</p>
 
-      <div>
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {products.map((product) => (
           <ProductCard
             key={product.id}
