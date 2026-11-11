@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { LayoutDashboard, Package, Tag, ShoppingCart, Users } from "lucide-react";
 
 const menuItems = [
-  { label: "Dashboard", icon: LayoutDashboard, path: "/admin" },
+  { label: "Панель управления", icon: LayoutDashboard, path: "/admin" },
   { label: "Товары", icon: Package, path: "/admin/products" },
   { label: "Категории", icon: Tag, path: "/admin/categories" },
   { label: "Заказы", icon: ShoppingCart, path: "/admin/orders" },
