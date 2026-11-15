@@ -1,6 +1,6 @@
-import FilterPanel from "../Components/Catalog/FilterPanel";
-import ProductGrid from "../Components/Catalog/ProductGrid";
-import { products } from "../data/products";
+import FilterPanel from "../Components/Catalog/FilterPanel.jsx";
+import EquipmentGrid from "../Components/Catalog/EquipmentGrid.jsx";
+import { equipment } from "../data/equipment.jsx";
 
 function ProductsPage({ eyebrow, title }) {
   return (
@@ -14,7 +14,7 @@ function ProductsPage({ eyebrow, title }) {
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[240px_1fr]">
         <FilterPanel />
-        <ProductGrid products={products} />
+        <EquipmentGrid equipment={equipment} />
       </div>
     </section>
   );

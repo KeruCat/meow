@@ -1,7 +1,7 @@
-import PageStub from "../Components/PageStub";
+import PageStub from "../Components/PageStub.jsx";
 
 function AdminPage() {
-  return <PageStub eyebrow="Админ-панель" title="Dashboard" />;
+  return <PageStub eyebrow="Админ-панель" title="Управление выдачей" />;
 }
 
 export default AdminPage;

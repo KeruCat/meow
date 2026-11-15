@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PageStub from "../Components/PageStub";
+import PageStub from "../Components/PageStub.jsx";
 
 function NotFoundPage() {
   return (

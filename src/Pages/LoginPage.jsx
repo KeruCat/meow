@@ -1,4 +1,4 @@
-import PageStub from "../Components/PageStub";
+import PageStub from "../Components/PageStub.jsx";
 
 function LoginPage() {
   return <PageStub eyebrow="Аккаунт" title="Вход" />;

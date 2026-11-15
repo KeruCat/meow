@@ -1,22 +1,10 @@
-import { Truck, ShieldCheck, RotateCcw } from "lucide-react";
-import FeatureItem from "./FeatureItem";
+import { Truck, ShieldCheck, CalendarDays } from "lucide-react";
+import FeatureItem from "./FeatureItem.jsx";
 
 const features = [
-  {
-    icon: Truck,
-    title: "Доставка 1–3 дня",
-    description: "По всей России, бесплатно от 5 000 ₽"
-  },
-  {
-    icon: ShieldCheck,
-    title: "Гарантия качества",
-    description: "Проверяем каждую партию товара"
-  },
-  {
-    icon: RotateCcw,
-    title: "Возврат 30 дней",
-    description: "Без вопросов и лишних формальностей"
-  }
+  { icon: Truck, title: "Доставка и монтаж", description: "Привезём, установим и заберём оборудование по городу" },
+  { icon: ShieldCheck, title: "Проверенная техника", description: "Тестируем каждую единицу перед выдачей" },
+  { icon: CalendarDays, title: "Гибкие сроки", description: "Аренда от 1 суток, продление по согласованию" }
 ];
 
 function Features() {

@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Package, Tag, ShoppingCart, Users } from "lucide-react";
+import { LayoutDashboard, Package, Tag, CalendarCheck, Users } from "lucide-react";
 
 const menuItems = [
-  { label: "Панель управления", icon: LayoutDashboard, path: "/admin" },
-  { label: "Товары", icon: Package, path: "/admin/products" },
+  { label: "Обзор", icon: LayoutDashboard, path: "/admin" },
+  { label: "Оборудование", icon: Package, path: "/admin/equipment" },
   { label: "Категории", icon: Tag, path: "/admin/categories" },
-  { label: "Заказы", icon: ShoppingCart, path: "/admin/orders" },
-  { label: "Пользователи", icon: Users, path: "/admin/users" },
+  { label: "Бронирования", icon: CalendarCheck, path: "/admin/bookings" },
+  { label: "Клиенты", icon: Users, path: "/admin/clients" }
 ];
 
 function AdminFooter() {
@@ -29,7 +29,7 @@ function AdminFooter() {
       </nav>
 
       <div className="mt-auto p-4">
-        <p className="text-sm">Учебный шаблон · CRUD товаров и категорий</p>
+        <p className="text-sm">Учебный проект · управление выдачей оборудования</p>
       </div>
     </aside>
   );

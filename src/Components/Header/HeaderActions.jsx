@@ -1,6 +1,6 @@
-import Search from "./Search";
-import AccountAction from "./AccountAction";
-import CartAction from "./CartAction";
+import Search from "./Search.jsx";
+import AccountAction from "./AccountAction.jsx";
+import BookingAction from "./BookingAction.jsx";
 
 function HeaderActions() {
   return (
@@ -9,7 +9,7 @@ function HeaderActions() {
 
       <AccountAction />
 
-      <CartAction count={0} />
+      <BookingAction count={0} />
     </div>
   );
 }

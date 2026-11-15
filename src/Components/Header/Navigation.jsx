@@ -1,15 +1,9 @@
-import NavItem from "./NavItem";
+import NavItem from "./NavItem.jsx";
 
 function Navigation() {
   const navigationItems = [
-    {
-      label: "Главная",
-      path: "/"
-    },
-    {
-      label: "Товары",
-      path: "/products"
-    }
+    { label: "Главная", path: "/" },
+    { label: "Оборудование", path: "/equipment" }
   ];
 
   return (

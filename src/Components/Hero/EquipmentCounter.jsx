@@ -1,8 +1,8 @@
-function ProductCounter({ count }) {
+function EquipmentCounter({ count }) {
   return (
     <div className="absolute -bottom-4 left-5 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm">
       <p className="text-xs text-gray-500">
-        Товаров в каталоге
+        Позиций в каталоге
       </p>
 
       <span className="mt-1 block text-xl font-medium text-gray-900">
@@ -12,4 +12,4 @@ function ProductCounter({ count }) {
   );
 }
 
-export default ProductCounter;
+export default EquipmentCounter;

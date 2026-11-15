@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import AdminHeader from "../AdminHeader/AdminHeader";
-import AdminFooter from "../AdminFooter/AdminFooter";
+import AdminHeader from "../AdminHeader/AdminHeader.jsx";
+import AdminFooter from "../AdminFooter/AdminFooter.jsx";
 function AdminLayout() {
   return (
     <div >

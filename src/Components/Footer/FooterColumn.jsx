@@ -1,4 +1,4 @@
-import NavItem from "../Header/NavItem";
+import NavItem from "../Header/NavItem.jsx";
 function FooterColumn({ title, links }) {
   return (
     <div>

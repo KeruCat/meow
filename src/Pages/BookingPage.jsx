@@ -1,4 +1,4 @@
-import PageStub from "../Components/PageStub";  
+import PageStub from "../Components/PageStub.jsx";  
 
 function CartPage({ eyebrow, title }) {
   return (

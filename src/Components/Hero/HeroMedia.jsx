@@ -1,20 +1,15 @@
-import ProductCounter from "./ProductCounter";
+import EquipmentCounter from "./EquipmentCounter.jsx";
 
-function HeroMedia({
-  image,
-  productCount
-}) {
+function HeroMedia({ image, equipmentCount }) {
   return (
     <div className="relative">
       <img
         src={image}
-        alt="Покупатель с товарами"
+        alt="Сцена с освещением на мероприятии"
         className="h-[380px] w-full rounded-2xl object-cover"
       />
 
-      <ProductCounter
-        count={productCount}
-      />
+      <EquipmentCounter count={equipmentCount} />
     </div>
   );
 }
