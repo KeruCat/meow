@@ -22,7 +22,8 @@ function PopularEquipment() {
             name={item.name}
             category={item.category}
             image={item.image}
-            price={item.price}
+            pricePerDay={item.pricePerDay}
+            minDays={item.minDays}
             inStock={item.inStock}
           />
         ))}

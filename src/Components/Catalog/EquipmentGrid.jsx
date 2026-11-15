@@ -13,7 +13,8 @@ function ProductGrid({ equipment }) {
             name={equipment.name}
             category={equipment.category}
             image={equipment.image}
-            price={equipment.price}
+            pricePerDay={equipment.pricePerDay}
+            minDays={equipment.minDays}
             inStock={equipment.inStock}
           />
         ))}

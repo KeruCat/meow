@@ -25,7 +25,7 @@ function EquipmentCard({ id, name, category, image, pricePerDay, available, tota
         </h3>
 
         <p className="mt-2 text-[15px] font-semibold text-gray-900">
-          {pricePerDay} ₽{" "}
+          {pricePerDay} ₽
           <span className="text-xs font-normal text-gray-500">/ сутки</span>
         </p>
 
