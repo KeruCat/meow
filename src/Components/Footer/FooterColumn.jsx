@@ -2,7 +2,7 @@ import NavItem from "../Header/NavItem.jsx";
 function FooterColumn({ title, links }) {
   return (
     <div>
-      <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+      <p className="text-xs font-medium uppercase tracking-[0.2em] text-ink-muted">
         {title}
       </p>
 

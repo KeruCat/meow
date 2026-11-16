@@ -7,15 +7,15 @@ function HeroContent({
 }) {
   return (
     <div className="max-w-xl">
-      <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+      <p className="mb-5 text-xs font-medium uppercase tracking-[0.2em] text-ink-muted">
         {label}
       </p>
 
-      <h1 className="max-w-lg text-5xl font-medium leading-[1.05] tracking-tight text-gray-950" style={{ color: "rgb(89, 89, 91)" }}>
+      <h1 className="max-w-lg text-5xl font-medium leading-[1.05] tracking-tight text-ink">
         {title}
       </h1>
 
-      <p className="mt-5 max-w-lg text-base leading-7 text-gray-500">
+      <p className="mt-5 max-w-lg text-base leading-7 text-ink-muted">
         {description}
       </p>
 

@@ -6,8 +6,8 @@ function EquipmentCard({ id, name, category, image, pricePerDay, available, tota
   const isAvailable = available > 0;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-colors hover:border-gray-400">
-      <Link to={href} className="block aspect-[4/3] overflow-hidden bg-gray-100">
+    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-card transition-colors hover:border-accent">
+      <Link to={href} className="block aspect-[4/3] overflow-hidden bg-page">
         <img
           src={image}
           alt={name}
@@ -16,40 +16,42 @@ function EquipmentCard({ id, name, category, image, pricePerDay, available, tota
       </Link>
 
       <div className="flex flex-1 flex-col p-4">
-        <p className="text-xs text-gray-500">{category}</p>
+        <p className="text-xs text-ink-muted">{category}</p>
 
-        <h3 className="mt-1.5 line-clamp-2 text-sm font-semibold leading-snug text-gray-900">
-          <Link to={href} className="hover:underline">
+        <h3 className="mt-1.5 line-clamp-2 min-h-10 text-sm font-semibold leading-snug text-ink">
+          <Link to={href} className="hover:text-accent">
             {name}
           </Link>
         </h3>
 
-        <p className="mt-2 text-[15px] font-semibold text-gray-900">
-          {pricePerDay} ₽
-          <span className="text-xs font-normal text-gray-500">/ сутки</span>
+        <p className="mt-2 whitespace-nowrap text-lg font-bold text-accent">
+          {pricePerDay.toLocaleString("ru-RU")} ₽{" "}
+          <span className="text-xs font-normal text-ink-muted">/ сутки</span>
         </p>
 
-        <div className="mt-2 flex items-center justify-between gap-2 text-[11px] font-medium">
+        <div className="mt-3 flex items-center justify-between gap-2 whitespace-nowrap rounded-lg bg-page px-3 py-1.5 text-[11px]">
           <span
-            className={`flex items-center gap-1.5 ${
-              isAvailable ? "text-emerald-900" : "text-gray-400"
+            className={`flex min-w-0 items-center gap-1.5 font-medium ${
+              isAvailable ? "text-accent" : "text-ink-muted/60"
             }`}
           >
             <span
-              className={`h-1.5 w-1.5 rounded-full ${
-                isAvailable ? "bg-emerald-900" : "bg-gray-400"
+              className={`h-1.5 w-1.5 shrink-0 rounded-full ${
+                isAvailable ? "bg-accent" : "bg-ink-muted/40"
               }`}
             ></span>
-            {isAvailable ? `Свободно: ${available} из ${total}` : "Нет свободных"}
+            <span className="truncate">
+              {isAvailable ? `Свободно: ${available} из ${total}` : "Нет свободных"}
+            </span>
           </span>
 
-          <span className="text-gray-500">от {minDays} сут.</span>
+          <span className="shrink-0 text-ink-muted">от {minDays} сут.</span>
         </div>
 
         <div className="mt-auto grid grid-cols-2 gap-2 pt-4">
           <Link
             to={href}
-            className="inline-flex h-8 items-center justify-center rounded-md border border-gray-200 bg-white px-3 text-xs font-medium text-gray-900 shadow-sm transition-colors hover:bg-gray-50"
+            className="inline-flex h-8 items-center justify-center rounded-md border border-line text-xs font-medium text-ink transition-colors hover:border-accent hover:text-accent"
           >
             Подробнее
           </Link>
@@ -57,7 +59,7 @@ function EquipmentCard({ id, name, category, image, pricePerDay, available, tota
           <button
             type="button"
             disabled={!isAvailable}
-            className="inline-flex h-8 items-center justify-center gap-1.5 whitespace-nowrap rounded-md bg-emerald-900 px-3 text-xs font-medium text-white shadow transition-colors hover:bg-emerald-800 disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none"
+            className="inline-flex h-8 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-accent text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-page disabled:cursor-not-allowed disabled:border-line disabled:text-ink-muted/40 disabled:hover:bg-transparent"
           >
             <CalendarCheck className="h-3.5 w-3.5" />
             Забронировать

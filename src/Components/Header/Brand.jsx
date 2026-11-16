@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
+
 function Brand({ name }) {
   return (
-    <div className="flex items-center gap-2">
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-900 text-sm font-semibold text-white">
+    <Link to="/" className="flex items-center gap-2.5">
+      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-bold text-page">
         {name.charAt(0)}
-      </div>
-
-      <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-900">
+      </span>
+      <span className="text-sm font-bold uppercase tracking-[0.16em] text-ink">
         {name}
       </span>
-    </div>
+    </Link>
   );
 }
 

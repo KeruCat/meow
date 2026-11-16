@@ -2,20 +2,20 @@ import FilterGroup from "./FilterGroup.jsx";
 
 const categories = ["Звук", "Свет", "Сцена", "Мебель"];
 
-const inputClass = "w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm text-gray-800 outline-none placeholder:text-gray-400 focus:border-gray-400";
+const inputClass = "w-full rounded-lg border border-line bg-page px-3 py-2 text-sm text-gray-800 outline-none placeholder:text-gray-400 focus:border-gray-400";
 
 function FilterPanel() {
   return (
-    <aside className="h-fit rounded-xl border border-gray-200 bg-white p-5">
-      <h2 className="text-base font-semibold text-gray-900">Фильтры</h2>
+    <aside className="h-fit rounded-xl border border-line bg-page p-5">
+      <h2 className="text-base font-semibold text-ink">Фильтры</h2>
 
       <div className="mt-4">
         <FilterGroup title="Даты аренды">
-          <label className="block text-xs text-gray-500">
+          <label className="block text-xs text-ink-muted">
             С
             <input type="date" className={`${inputClass} mt-1`} />
           </label>
-          <label className="block text-xs text-gray-500">
+          <label className="block text-xs text-ink-muted">
             По
             <input type="date" className={`${inputClass} mt-1`} />
           </label>
@@ -23,8 +23,8 @@ function FilterPanel() {
 
         <FilterGroup title="Категория">
           {categories.map((category) => (
-            <label key={category} className="flex items-center gap-2 text-sm text-gray-600">
-              <input type="checkbox" className="h-4 w-4 accent-emerald-900" />
+            <label key={category} className="flex items-center gap-2 text-sm text-ink-muted">
+              <input type="checkbox" className="h-4 w-4 accent-accent" />
               {category}
             </label>
           ))}
@@ -38,8 +38,8 @@ function FilterPanel() {
         </FilterGroup>
 
         <FilterGroup title="Доступность">
-          <label className="flex items-center gap-2 text-sm text-gray-600">
-            <input type="checkbox" className="h-4 w-4 accent-emerald-900" />
+          <label className="flex items-center gap-2 text-sm text-ink-muted">
+            <input type="checkbox" className="h-4 w-4 accent-accent" />
             Только свободное
           </label>
         </FilterGroup>
@@ -48,13 +48,13 @@ function FilterPanel() {
       <div className="mt-5 grid grid-cols-2 gap-2">
         <button
           type="button"
-          className="h-9 rounded-md border border-gray-200 bg-white text-sm font-medium text-gray-900 transition-colors hover:bg-gray-50"
+          className="h-9 rounded-md border border-line bg-page text-sm font-medium text-ink transition-colors hover:bg-card"
         >
           Сбросить
         </button>
         <button
           type="button"
-          className="h-9 rounded-md bg-emerald-900 text-sm font-medium text-white transition-colors hover:bg-emerald-800"
+          className="h-9 rounded-md bg-accent text-sm font-medium text-page transition-colors hover:bg-accent-dim"
         >
           Применить
         </button>

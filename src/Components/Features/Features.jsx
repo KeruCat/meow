@@ -9,8 +9,8 @@ const features = [
 
 function Features() {
   return (
-    <section className="mx-auto max-w-6xl px-6">
-      <div className="grid gap-6 rounded-xl border border-gray-200 bg-white p-6 sm:grid-cols-3 sm:p-8">
+    <section className="mx-auto max-w-6xl px-6 mt-12">
+      <div className="grid gap-6 rounded-xl border border-line bg-page p-6 sm:grid-cols-3 sm:p-8">
         {features.map((feature) => (
           <FeatureItem
             key={feature.title}

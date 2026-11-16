@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom";
+import { User } from "lucide-react";
+
 function AccountAction() {
   return (
-    <a
-      type="button"
-      href="/login"
-      className="rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100"
+    <Link
+      to="/login"
+      className="flex flex-col items-center gap-0.5 text-xs text-ink-muted transition-colors hover:text-accent"
     >
+      <User className="h-5 w-5" />
       Войти
-    </a>
+    </Link>
   );
 }
 

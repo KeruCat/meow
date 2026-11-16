@@ -5,7 +5,7 @@ import { equipment } from "../../data/equipment.jsx";
 
 function Hero() {
   return (
-    <section className="bg-white">
+    <section className="bg-page">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:py-20">
         <HeroContent
           label="Прокат для мероприятий"

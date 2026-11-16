@@ -4,17 +4,17 @@ function SectionHeader({ eyebrow, title, linkText, href }) {
   return (
     <div className="flex items-end justify-between gap-4">
       <div>
-        <p className="text-xs font-medium uppercase text-gray-500">
+        <p className="text-xs font-medium uppercase text-ink-muted">
           {eyebrow}
         </p>
-        <h2 className="mt-2 font-serif text-4xl tracking-tight text-gray-900" style={{ color: "rgb(89, 89, 91)" }}>
+        <h2 className="mt-2 font-bold uppercase tracking-tight text-4xl tracking-tight text-ink">
           {title}
         </h2>
       </div>
 
       <a
         href={href}
-        className="hidden items-center gap-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900 sm:flex"
+        className="hidden items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-ink sm:flex"
       >
         {linkText}
         <ArrowRight className="h-3.5 w-3.5"/>  

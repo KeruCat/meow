@@ -1,19 +1,15 @@
-import NavItem from "./NavItem.jsx";
+import NavItem from "./NavItem";
+
+const navigationItems = [
+  { label: "Главная", path: "/" },
+  { label: "Оборудование", path: "/equipment" }
+];
 
 function Navigation() {
-  const navigationItems = [
-    { label: "Главная", path: "/" },
-    { label: "Оборудование", path: "/equipment" }
-  ];
-
   return (
     <nav className="flex items-center gap-6">
       {navigationItems.map((item) => (
-        <NavItem
-          key={item.path}
-          label={item.label}
-          path={item.path}
-        />
+        <NavItem key={item.path} label={item.label} path={item.path} />
       ))}
     </nav>
   );

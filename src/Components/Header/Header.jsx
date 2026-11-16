@@ -1,17 +1,13 @@
-import Brand from "./Brand.jsx";
-import Navigation from "./Navigation.jsx";
-import HeaderActions from "./HeaderActions.jsx";
+import Brand from "./Brand";
+import Navigation from "./Navigation";
+import HeaderActions from "./HeaderActions";
 
 function Header() {
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <div className="flex items-center gap-8">
-          <Brand name="Эвент-Прокат" />
-
-          <Navigation />
-        </div>
-
+    <header className="sticky top-0 z-10 border-b border-line bg-page/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center gap-8 px-6 py-3">
+        <Brand name="Эвент-Прокат" />
+        <Navigation />
         <HeaderActions />
       </div>
     </header>
