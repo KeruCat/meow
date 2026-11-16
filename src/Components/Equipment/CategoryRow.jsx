@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import EquipmentCard from "../EquipmentCard/EquipmentCard";
-import { equipment } from "../../data/equipment";
+import Loader from "../Status/Loader";
+import ErrorMessage from "../Status/ErrorMessage";
+import { useEquipment } from "../../hooks/useEquipment";
 
 function CategoryRow({ name, icon: Icon }) {
-  const items = equipment.filter((item) => item.category === name).slice(0, 4);
+  const { equipment , loading, error, reload } = useEquipment({
+    category: name,
+    limit: 4
+  });
 
-  if (items.length === 0) return null;
+  if (!loading && !error && equipment.length === 0) return null;
 
   return (
     <section className="mx-auto max-w-6xl px-6 pt-12">
@@ -25,11 +30,16 @@ function CategoryRow({ name, icon: Icon }) {
         </Link>
       </div>
 
-      <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((item) => (
-          <EquipmentCard key={item.id} {...item} />
-        ))}
-      </div>
+      {loading && <Loader />}
+      {error && <ErrorMessage message={error} onRetry={reload} />}
+
+      {!loading && !error && (
+        <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {equipment.map((item) => (
+            <EquipmentCard key={item.id} {...item} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
