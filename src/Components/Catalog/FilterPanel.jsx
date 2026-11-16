@@ -1,6 +1,5 @@
 import FilterGroup from "./FilterGroup.jsx";
-
-const categories = ["Звук", "Свет", "Сцена", "Мебель"];
+import { categories } from "../../data/categories.jsx";
 
 const inputClass = "w-full rounded-lg border border-line bg-page px-3 py-2 text-sm text-gray-800 outline-none placeholder:text-gray-400 focus:border-gray-400";
 
@@ -23,9 +22,9 @@ function FilterPanel() {
 
         <FilterGroup title="Категория">
           {categories.map((category) => (
-            <label key={category} className="flex items-center gap-2 text-sm text-ink-muted">
+            <label key={category.name} className="flex items-center gap-2 text-sm text-ink-muted">
               <input type="checkbox" className="h-4 w-4 accent-accent" />
-              {category}
+              {category.name}
             </label>
           ))}
         </FilterGroup>

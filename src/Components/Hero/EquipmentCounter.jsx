@@ -1,13 +1,8 @@
 function EquipmentCounter({ count }) {
   return (
-    <div className="absolute -bottom-4 left-5 rounded-xl border border-line bg-page px-4 py-3 shadow-sm">
-      <p className="text-xs text-ink-muted">
-        Позиций в каталоге
-      </p>
-
-      <span className="mt-1 block text-xl font-medium text-ink">
-        {count}
-      </span>
+    <div className="absolute bottom-4 right-4 hidden rounded-xl border border-line bg-card/90 px-4 py-2.5 backdrop-blur sm:block">
+      <p className="text-xs text-ink-muted">Позиций в каталоге</p>
+      <p className="text-2xl font-bold text-accent">{count}</p>
     </div>
   );
 }

@@ -1,15 +1,13 @@
-import Hero from "../Components/Hero/Hero.jsx";
-import Categories from "../Components/Categories/Categories.jsx";
-import PopularEquipment from "../Components/Equipment/PopularEquipment.jsx";
-import Features from "../Components/Features/Features.jsx";  
+import Hero from "../Components/Hero/Hero";
+import Features from "../Components/Features/Features";
+import CategoryRows from "../Components/Equipment/CategoryRows";
 
 function HomePage() {
   return (
     <>
       <Hero />
-      <Categories />
-      <PopularEquipment />
       <Features />
+      <CategoryRows />
     </>
   );
 }
