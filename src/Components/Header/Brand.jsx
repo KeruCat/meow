@@ -6,7 +6,7 @@ function Brand({ name }) {
       <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-bold text-page">
         {name.charAt(0)}
       </span>
-      <span className="text-sm font-bold uppercase tracking-[0.16em] text-ink">
+      <span className="hidden text-sm font-bold uppercase tracking-[0.16em] text-ink min-[144px]:inline">
         {name}
       </span>
     </Link>

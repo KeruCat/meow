@@ -4,27 +4,46 @@ import { categories } from "../../data/categories";
 
 function CategoryMenu() {
   return (
-    <nav className="hidden overflow-hidden rounded-2xl border border-line bg-card lg:block">
-      <div className="flex items-center gap-2 bg-accent px-4 py-3 text-sm font-bold text-page">
-        <Menu className="h-4 w-4" />
-        Категории
-      </div>
-
-      <ul className="divide-y divide-line">
+    <>
+      <nav
+        aria-label="Категории"
+        className="flex flex-wrap gap-2 lg:hidden"
+      >
         {categories.map(({ name, icon: Icon }) => (
-          <li key={name}>
-            <Link
-              to={`/equipment?category=${encodeURIComponent(name)}`}
-              className="flex items-center gap-3 px-4 py-3 text-sm text-ink-muted transition-colors hover:text-accent"
-            >
-              <Icon className="h-4 w-4 shrink-0" />
-              <span className="flex-1">{name}</span>
-              <ChevronRight className="h-4 w-4" />
-            </Link>
-          </li>
+          <Link
+            key={name}
+            to={`/equipment?category=${encodeURIComponent(name)}`}
+            className="flex items-center gap-2 rounded-full border border-line bg-card px-4 py-2 text-sm text-ink-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            <Icon className="h-4 w-4 shrink-0" />
+            {name}
+          </Link>
         ))}
-      </ul>
-    </nav>
+      </nav>
+
+
+      <nav className="hidden overflow-hidden rounded-2xl border border-line bg-card lg:block">
+        <div className="flex items-center gap-2 bg-accent px-4 py-3 text-sm font-bold text-page">
+          <Menu className="h-4 w-4" />
+          Категории
+        </div>
+
+        <ul className="divide-y divide-line">
+          {categories.map(({ name, icon: Icon }) => (
+            <li key={name}>
+              <Link
+                to={`/equipment?category=${encodeURIComponent(name)}`}
+                className="flex items-center gap-3 px-4 py-3 text-sm text-ink-muted transition-colors hover:text-accent"
+              >
+                <Icon className="h-4 w-4 shrink-0" />
+                <span className="flex-1">{name}</span>
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 import CategoryMenu from "./CategoryMenu";
 import HeroContent from "./HeroContent";
 import HeroMedia from "./HeroMedia";
-import heroImage from "../../assets/hero.png";
+import heroImage from "../../../dist/assets/hero.jpg";
 import { useEquipmentCount } from "../../hooks/useEquipmentCount";
 
 function Hero() {

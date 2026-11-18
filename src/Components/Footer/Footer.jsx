@@ -29,10 +29,10 @@ const columns = [
 
 function Footer() {
   return (
-    <footer className="mt-20 border-t border-line bg-page">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <Brand name="Эвент-Прокат" />
+    <footer className="mt-16 border-t border-line bg-page sm:mt-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-4 py-10 sm:grid-cols-3 sm:px-6 sm:py-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-10">
+        <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+          <Brand name="Эвент-Прокат" alwaysShowName />
 
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
             Прокат оборудования для мероприятий: каталог, доступность, сроки и онлайн-бронирование.
@@ -49,9 +49,9 @@ function Footer() {
       </div>
 
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-5 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-5 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>© 2026 Эвент-Прокат. Учебный проект.</p>
-          <p>Дизайн-система: React · Tailwind CSS · React Router</p>
+          <p>React · Tailwind CSS · React Router</p>
         </div>
       </div>
     </footer>

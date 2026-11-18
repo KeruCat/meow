@@ -48,10 +48,10 @@ function EquipmentCard({ id, name, category, image, pricePerDay, available, tota
           <span className="shrink-0 text-ink-muted">от {minDays} сут.</span>
         </div>
 
-        <div className="mt-auto grid grid-cols-2 gap-2 pt-4">
+        <div className="mt-auto flex gap-2 pt-4">
           <Link
             to={href}
-            className="inline-flex h-8 items-center justify-center rounded-md border border-line text-xs font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex h-9 shrink-0 items-center justify-center rounded-md border border-line px-3 text-xs font-medium text-ink transition-colors hover:border-accent hover:text-accent"
           >
             Подробнее
           </Link>
@@ -59,10 +59,10 @@ function EquipmentCard({ id, name, category, image, pricePerDay, available, tota
           <button
             type="button"
             disabled={!isAvailable}
-            className="inline-flex h-8 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-accent text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-page disabled:cursor-not-allowed disabled:border-line disabled:text-ink-muted/40 disabled:hover:bg-transparent"
+            className="inline-flex h-9 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-md border border-accent px-2 text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-page disabled:cursor-not-allowed disabled:border-line disabled:text-ink-muted/40 disabled:hover:bg-transparent"
           >
-            <CalendarCheck className="h-3.5 w-3.5" />
-            Забронировать
+            <CalendarCheck className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">Забронировать</span>
           </button>
         </div>
       </div>
