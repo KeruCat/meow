@@ -22,10 +22,10 @@ function CategoryRow({ name, icon: Icon }) {
         </h2>
 
         <Link
-          to={`/equipment?category=${encodeURIComponent(name)}`}
+          to={`/equipment?category=${name}`}
           className="flex items-center gap-1.5 text-sm font-medium text-ink-muted transition-colors hover:text-accent"
         >
-          Все в категории
+          Подробнее
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
