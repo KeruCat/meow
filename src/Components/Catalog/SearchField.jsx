@@ -1,6 +1,6 @@
 import { Search, X } from "lucide-react";
 
-function SearchField({ value, onChange }) {
+function SearchField({ value, onChange, placeholder }) {
   return (
     <div className="relative">
       <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" />
@@ -9,7 +9,7 @@ function SearchField({ value, onChange }) {
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Поиск по названию или категории"
+        placeholder = {placeholder}
         className="w-full rounded-lg border border-line bg-card py-2 pl-10 pr-9 text-sm text-ink outline-none placeholder:text-ink-muted/60 focus:border-accent"
       />
 

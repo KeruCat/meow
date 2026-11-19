@@ -82,6 +82,7 @@ function EquipmentPage({ eyebrow, title }) {
               <SearchField
                 value={filters.search}
                 onChange={(search) => updateFilters({ search })}
+                placeholder={"Поиск по названию или категории"}
               />
             </div>
 
