@@ -34,7 +34,7 @@ function EquipmentPage({ eyebrow, title }) {
 
   const [filters, setFilters] = useState(() => filtersFromUrl(urlSearch, urlCategory));
   const [sort, setSort] = useState("default");
-  const [filtersOpen, setFiltersOpen] = useState(false); // новое
+  const [filtersOpen, setFiltersOpen] = useState(false); 
 
   useEffect(() => {
     setFilters(filtersFromUrl(urlSearch, urlCategory));
@@ -45,8 +45,8 @@ function EquipmentPage({ eyebrow, title }) {
     [equipment, filters, sort]
   );
 
-  const activeCount = countActiveFilters(filters); // новое
-  const closeFilters = useCallback(() => setFiltersOpen(false), []); // новое
+  const activeCount = countActiveFilters(filters);
+  const closeFilters = useCallback(() => setFiltersOpen(false), []); 
 
   function updateFilters(patch) {
     setFilters((prev) => ({ ...prev, ...patch }));

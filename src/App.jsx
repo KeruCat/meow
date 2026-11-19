@@ -28,12 +28,13 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
 
-        <Route element={<AdminLayout />}>
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/admin/equipment" element={<AdminEquipmentPage />} />
-          <Route path="/admin/categories" element={<AdminCategoriesPage />} />
-          <Route path="/admin/bookings" element={<AdminBookingsPage />} />
-          <Route path="/admin/clients" element={<AdminClientsPage />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminPage />} />
+          <Route path="equipment" element={<AdminEquipmentPage />} />
+          <Route path="categories" element={<AdminCategoriesPage />} />
+          <Route path="bookings" element={<AdminBookingsPage />} />
+          <Route path="clients" element={<AdminClientsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
